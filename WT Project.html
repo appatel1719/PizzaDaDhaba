@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pizza Da Dhaba</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+</head>
+
+
+
+<style>
+.menu {
+	display: none
+}
+.bgimg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("https://api.foodso.me/uploads/43epDxCc.jpg");
+  min-height: 90%;
+	min-width: 10%;
+  position: relative;
+}
+
+h1{
+	font-size: 36px;
+}
+.bar{
+	width:100%;
+	overflow:hidden;
+	font-size: 24px;
+	color:white;
+	background-color: #000;
+	opacity: 0.6;
+}
+.bar:hover{
+	opacity: 1;
+}
+.bar:before,.bar:after{content:"";display:table;clear:both}
+.tablink{
+	padding:8px 16px;
+	float:left;
+	width:auto;
+	border:none;
+	display:inline-block;
+	outline:0;
+	vertical-align: middle;
+	overflow: hidden;
+	text-decoration: none;
+	color: inherit;
+	text-align: center;
+	white-space: nowrap;
+	cursor: pointer;
+}
+.ope{
+  position:absolute;
+  left:0;
+  bottom:0;
+  padding: 8px 16px;
+}
+.opein{
+  background-color:#000;
+  color:#fff;
+  font-size: 24px;
+  display:inline-block;
+  padding-left:8px;
+  padding-right:8px;
+  text-align:center;
+}
+.seemenu{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  text-align:center;
+}
+.seemenuin{
+  border:none;
+  display:inline-block;
+  padding:8px 16px;
+  vertical-align:middle;
+  overflow:hidden;
+  text-decoration:none;
+  color:inherit;
+  background-color:inherit;
+  text-align:center;
+  cursor:pointer;
+  white-space:nowrap;
+  font-size:36px;
+  color:#fff;
+  background-color: #000;
+}
+.seemenuin:hover{
+  color: #000;
+  background-color: #ccc;
+}
+.red{
+	color: #fff;
+	background-color: #f44336;
+}
+.mmenu:after,.mmenu:before{
+	content: "";
+	display: table;
+	clear: both;
+}
+.resimg{
+	margin-top: 16px;
+	margin-bottom: 16px;
+	filter:none;
+}
+.mmenu{
+	color: #fff;
+	background-color: #000;
+	padding-top: 64px;
+	padding-bottom: 64px;
+	font-size: 36px;
+	padding:0.01em 16px;
+}
+.mmenuin{
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 990px
+}
+.menutab:after,.menutab:before{
+	content:"";display:table;clear:both;
+	box-sizing: inherit;
+}*,*:before,*:after{/* box-sizing:inherit; */}
+.menutab{
+	text-align: center;
+	border:1px solid #ccc;
+	box-sizing: inherit;
+  display:table;
+  width:100%;
+}
+.menulist{
+	float: left;
+	padding: 12px 24px;
+}
+.menulist:hover{
+	color: #fff;
+	background-color: #f44336;
+}
+.mabout{
+	padding-top: 64px;
+	padding-bottom: 64px;
+	color:#fff;
+	background-color: #f44336;
+	filter:grayscale(70%);
+	font-size: 24px;
+	padding:0.01em 16px;
+}
+.mabout:after,.mabout:before{
+
+	content:"";
+	display:table;
+	clear:both;
+}
+.row:after,.row:before{
+	content: "";
+	display: table;
+	clear: both;
+}
+.mcontact:before,.mcontact:after{
+	content:"";
+	display:table;
+	clear:both;
+}
+.mcontact{
+	padding-top: 64px;
+	padding-bottom: 64px;
+	color: #fff;
+	background-color: #607d8b;
+	font-size: 24px;
+}
+input{
+	font: inherit;
+}
+	html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
+.inp{
+	padding:8px;
+	display:block;
+	width:100%;
+	padding-bottom: 16px;
+	padding-top: 16px;
+	border:1px solid #ccc;
+}
+.button{
+	font: inherit;
+	border:none;
+	display:block;
+	padding:8px 16px;
+	vertical-align:middle;
+	overflow:hidden;
+	width: 100%;
+	text-decoration:none;
+	color:inherit;
+	background-color:inherit;
+	text-align:center;
+	cursor:pointer;
+	white-space:nowrap;
+	color: #000;
+	background-color: #f1f1f1;
+}
+body, html {
+	height: 100%;
+}
+body{
+	margin:0;
+}
+body,h1,h2,h3,h4,h5,h6 {
+	font-family: "Amatic SC", cursive;
+}
+.button:hover{
+	font-weight: bold;
+	background-color: #ccc;
+}
+footer{
+	display: block;
+	text-align: center;
+	width: auto;
+	color: #fff;
+	background-color: #000;
+	font-size: 36px;
+	padding-top: 48px;
+	padding-bottom: 48px;
+}
+.menucat:after,.menucat:before{
+	content: "";
+	display: table;
+	clear: both;
+}
+.grey{
+	color: #757575;
+}
+.menucat{
+	padding: 0.01em 16px;
+	padding-top: 32px;
+	padding-bottom: 32px;
+	color: #000;
+	background-color: #fff;
+}
+.menuitemprice{
+	background-color:#616161;
+	color:#fff;
+	display:inline-block;
+	padding-left:8px;
+	padding-right:8px;
+	border-radius: 4px;
+	text-align:center;
+	float: right;
+}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<!-- <div class="tab">
+  <div class="bar" id="myNavbar">
+    <a href="#" class="tablink">HOME</a>
+    <a href="#menu" class="tablink">MENU</a>
+    <a href="#about" class="tablink">ABOUT</a>
+    <a href="#contact" class="tablink">CONTACT</a>
+  </div>
+</div> -->
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Pizza Da Dhaba</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+			<li><a href="#">HOME</a></li>
+			<li><a href="#menu" >MENU</a></li>
+		  <li><a href="#about">ABOUT</a></li>
+		  <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Header with image -->
+<header class="bgimg" id="home">
+
+  <div class="ope">
+    <span class="opein">Open from 10am to 11pm</span>
+  </div>
+  <div class="seemenu"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <p><a href="#menu" class="seemenuin">Let me see the menu</a></p>
+  </div>
+</header>
+
+<!-- Menu -->
+<div class="mmenu" id="menu">
+  <div class="mmenuin">
+
+    <h1 style="font-size: 64px;margin-top: 50px ; margin-bottom:64px; width: auto; text-align: center;">THE MENU</h1>
+    <div class="menutab">
+      <a onclick="menu(event, 'Pizza');" style="cursor: pointer;"  id="myLink">
+        <div class="menulist col-4 tablinks">Pizza</div>
+      </a>
+      <a onclick="menu(event, 'Sandwich');" style="cursor: pointer;" >
+        <div class="menulist col-4 tablinks">Sandwich</div>
+      </a>
+      <a onclick="menu(event, 'Shakes');" style="cursor: pointer;" >
+        <div class="menulist col-4 tablinks">Shakes</div>
+      </a>
+    </div>
+
+    <div id="Pizza" class="menucat menu">
+
+      <h1><b>Margherita</b> <span class="menuitemprice">79</span></h1>
+			<p class="grey">Fresh tomatoes, fresh mozzarella, fresh basil</p>
+			<hr>
+
+			<h1><b>Formaggio</b> <span class="menuitemprice">89</span></h1>
+			<p class="grey">Four cheeses (mozzarella, parmesan, pecorino, jarlsberg)</p>
+			<hr>
+
+			<h1><b>Golden Corn</b> <span class="menuitemprice">99</span></h1>
+			<p class="grey">Fresh tomatoes, fresh cheese, fresh corns</p>
+			<hr>
+
+			<h1><b>Corn Cheese</b> <span class="menuitemprice">99</span></h1>
+			<p class="grey">Fresh tomatoes, fresh mozzarella, fresh corns</p>
+			<hr>
+
+			<h1><b>Mumbaiya Pizza</b> <span class="menuitemprice">109</span></h1>
+			<p class="grey">Fresh tomatoes, Sp. Mumbai Masala, fresh capsicum, cheese</p>
+			<hr>
+
+			<h1><b>Indori Pizza</b> <span class="menuitemprice">119</span></h1>
+			<p class="grey">Fresh Tomatoes, Sp. Indori Masala,Fresh onions,cheese</p>
+			<hr>
+
+			<h1><b>Lakhnavi Nawabi Pizza</b> <span class="menuitemprice">129</span></h1>
+			<p class="grey">(Fresh Tomatoes, Sp. Lakhnavi Masala,Fresh Mozzarella)</p>
+			<hr>
+
+			<h1><b>Makhni Pizza</b> <span class="menuitemprice">129</span></h1>
+			<p class="grey">(Sp. Magic masala, Italian Pizza sauce, Fresh onions and Cheese)</p>
+			<hr>
+
+			<h1><b>Amritsari Pizza</b> <span class="menuitemprice">129</span></h1>
+			<p class="grey">(Sp. Amritsari masala, Jalapenos, Capsicum,Fresh pecorino)</p>
+			<hr>
+
+			<h1><b>Chinese Pizza</b> <span class="menuitemprice">129</span></h1>
+			<p class="grey">(Chinese noodles and manchurian,Fresh pecorino,Fresh tomatoes )</p>
+			<hr>
+
+			<h1><b>Exotic Paradise </b> <span class="menuitemprice">159</span></h1>
+			<p class="grey">/9Fresh tomatoes, fresh mozzarella, fresh basil, Exotic sauce, Fresh pecorino)</p>
+			<hr>
+
+			<h1><b>Tandoori Paneer</b> <span class="menuitemprice">159</span></h1>
+			<p class="grey">(Fried Paneer, Fresh Tomatoes, Capsicum, Onions,Mozzarello,pecorino)</p>
+			<hr>
+
+			<h1><b>Maharaja Paneer</b> <span class="menuitemprice">149</span></h1>
+			<p class="grey">(Big Paneer pieces, mozarello, Tomatoes, Basil, jalapenos, jarlsberg)</p>
+
+    </div>
+
+    <div id="Sandwich" class="menucat menu">
+      <h1><b>Masala Sandwich</b> <span class="menuitemprice">49</span></h1>
+			<p class="grey">(Tomatoe slices, Capsicum pieces, cheese)</p>
+			<hr>
+
+			<h1><b>Pasta Sandwich</b> <span class="menuitemprice">59</span></h1>
+			<p class="grey">(Cheese Pasta, whole wheat bread, Tomatoe slices)</p>
+			<hr>
+
+			<h1><b>Maggi Sandwich</b> <span class="menuitemprice">59</span></h1>
+			<p class="grey">(Masala maggi, Cheese)</p>
+			<hr>
+
+			<h1><b>Veggie Sandwich</b> <span class="menuitemprice">59</span></h1>
+			<p class="grey">(Cabbage, Tomatoes, Oniones, Capsicum, Mayonnaise)</p>
+			<hr>
+
+			<h1><b>Rich Creamy Sandwich</b> <span class="menuitemprice">59</span></h1>
+			<p class="grey">(Salads, Fresh Cream, Cheese)</p>
+			<hr>
+
+			<h1><b>Indori Masala Sandwich</b> <span class="menuitemprice">59</span></h1>
+			<p class="grey">(Sp. Indori Masala, Tomatoes, Cheese)</p>
+			<hr>
+
+			<h1><b>Club Masala Sandwich</b> <span class="menuitemprice">79</span></h1>
+			<p class="grey">(Sp. Masala, Whole wheat bread, Mayonnaise)</p>
+			<hr>
+
+			<h1><b>Club Veggie Sandwich</b> <span class="menuitemprice">79</span></h1>
+			<p class="grey">(Salads, Whole wheat Bread,Mayonnaise, Sp. masala)</p>
+			<hr>
+
+			<h1><b>Club Rich Creamy Sandwich</b> <span class="menuitemprice">89</span></h1>
+			<p class="grey">(Salads, Whole wheat Bread,Mayonnaise, Sp. masala, Fresh cream)</p>
+			<hr>
+
+			<h1><b>Veg Kababi Sandwich </b> <span class="menuitemprice">89</span></h1>
+			<p class="grey">(Kababs, Cheese, Salads, Mayonnaise)</p>
+			<hr>
+
+			<h1><b>Paneer Tikka Sandwich</b> <span class="menuitemprice">99</span></h1>
+			<p class="grey">(Paneer Pieces, Magic masala, Cheese, Mayonnaise, Tomatoes, Capsicum)</p>
+			<hr>
+    </div>
+
+
+    <div id="Shakes" class="menucat menu">
+      <h1><b>Paan Shake</b> <span class="menuitemprice">69</span></h1>
+			<hr>
+
+			<h1><b>Saffron Shake</b> <span class="menuitemprice">69</span></h1>
+			<hr>
+
+			<h1><b>Chocolate Shake</b> <span class="menuitemprice">64</span></h1>
+			<hr>
+
+			<h1><b>Strawberry Shake</b> <span class="menuitemprice">64</span></h1>
+			<hr>
+
+			<h1><b>Kit-kat Shake</b> <span class="menuitemprice">64</span></h1>
+			<hr>
+
+			<h1><b>Oreo Shake</b> <span class="menuitemprice">64</span></h1>
+			<hr>
+
+			<h1><b>Dark Chocolate Shake</b> <span class="menuitemprice">79</span></h1>
+			<hr>
+    </div><br>
+
+  </div>
+</div>
+
+<!-- About -->
+<div class="mabout" id="about">
+  <div style="margin-top: 50px; margin-left:auto;margin-right:auto;max-width:980px">
+    <h1 style="font-size: 64px; margin-bottom:64px; width: auto; text-align: center;">About</h1>
+    <p>PIZZA DA DHABA name itself suggest that here we serve Western food with Indian ATTITUDE. Western culture has seeped into the Indian society, and this is evident in the clothes that people wear, the food they consume and the lifestyles they lead. And one of the foods that Indians have become a fan of is the pizza. According to our new research report, the demand for various fast food items is consistently rising in India. The most delectable of them all is Pizza, which has now emerged as one of the most favourite fastfood items of the Indians especially the young generation.</p>
+
+    <p>We are proud of our interiors.</p>
+    <img src="https://scontent.famd4-1.fna.fbcdn.net/v/t1.0-9/19059917_492765037736933_1629079296960944935_n.jpg?_nc_cat=109&_nc_ht=scontent.famd4-1.fna&oh=501bf719825c8cb9ed03624d8ed01e7f&oe=5D1A09BE" style="width:100%" class="resimg" alt="Restaurant">
+    <h1><b>Opening Hours</b></h1>
+
+    <div class="row">
+      <div style="width:50%;float: left;">
+        <p>Monnday 10:00 - 23:00</p>
+        <p>Tuesday 10:00 - 23:00</p>
+        <p>Wednesday 10:00 - 23:00</p>
+        <p>Thursday 10:00 - 23:00</p>
+      </div>
+      <div style="width:50%;float: left;">
+        <p>Friday 10:00 - 23:00</p>
+        <p>Saturday 10:00 - 23:00</p>
+        <p>Sunday Closed</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- Contact Us -->
+<div class="mcontact" id="contact">
+  <div style="padding: 16px; margin-left:auto;margin-right:auto;max-width:990px;">
+    <h1 style="font-size: 64px; margin-bottom:64px; width: auto; text-align: center;">Contact</h1>
+    <p>Call us at 9714428488</p>
+
+    <p style="font-size: 36px;"><strong>Reserve</strong> a table, ask for today's special or just send us a message:</p>
+    <form target="_blank">
+      <p><input class="inp" type="text" placeholder="Name" required id="name"></p>
+      <p><input class="inp" type="number" placeholder="How many people" required id="people"></p>
+      <p><input class="inp" type="datetime-local" placeholder="Date and time" required id="date" value="2019-01-24T20:00"></p>
+      <p><input class="inp" type="text" placeholder="Message \ Special requirements" required id="message"></p>
+      <p><button class="button" type="submit" onclick="send();">SEND MESSAGE</button></p>
+    </form>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <p>Created By -</p>
+  <p>Akash Patel (17ce068)<br>	Ayushi Patel (17ce069)<br> Aashay Pandya (17ce062)</p>
+</footer>
+
+<script>
+// Tabbed Menu
+function menu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" red", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " red";
+}
+document.getElementById("myLink").click();
+//Ganesh Gaitonde
+	function send(){
+		var na = document.getElementById("name").value;
+		var no = document.getElementById("people").value;
+		var dat = document.getElementById("date").value;
+		var mess = document.getElementById("message").value;
+
+		na.value="";
+		no.value="";
+		dat.value="2019-01-24T20:00";
+		mess.value="";
+	}
+</script>
+
+</body>
+</html>
